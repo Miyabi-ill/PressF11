@@ -1,0 +1,3 @@
+author = Miyabi
+version = 0.9.0
+displayName = PressF11

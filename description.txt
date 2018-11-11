@@ -1,0 +1,16 @@
+Is Terraria too easy for you? Are you craving a challenge? You've come to the right place.
+This mod hides all UIs like when you press F11 in the game.
+You can't see your inventory, health, mana, buffs, your friendly mouse cursor, and all other UIs.
+Don't worry, you can stop this mode by pressing F11 at any time.
+
+This mod uses hotkeys below.
+Switch Slots (Default : Y)
+Switches hotbar to each row of the inventory.
+Swap Vertical (Default : U)
+Swaps the selected item for the one under it.
+Swap horizontal (Default : I)
+Swaps the selected item for the one on the right. If the selected item is on the far right (#0), swaps it for the one on the far left (#1).
+Loot All (Default : L)
+Identical to 'Loot All'. Loots all items in a chest while opening it.
+Craft Random Item (Default : K)
+Crafts available item randomly.
