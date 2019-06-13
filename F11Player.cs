@@ -9,12 +9,14 @@ namespace PressF11
 {
     class F11Player : ModPlayer
     {
-        private bool hideMode = true;
-        private int slot = 1;
+        private bool hideMode = true; //hide UI mode
+        private int slot = 1; //inventory row #. 1-4.
+
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
             if (PressF11.SwitchSlots.JustPressed && player.whoAmI == Main.myPlayer)
             {
+                //inventory row swap with #0 and #slot
                 for (int i = 0; i < 10; i++)
                 {
                     Item tmp = player.inventory[slot * 10 + i];
@@ -35,6 +37,7 @@ namespace PressF11
             }
             if (PressF11.SwapVertical.JustPressed && player.whoAmI == Main.myPlayer)
             {
+                //swap with selected item and next row item(same column. 0 and 10, 1 and 11, ... , 9 and 19)
                 Item tmp = player.inventory[player.selectedItem];
                 player.inventory[player.selectedItem] = player.inventory[player.selectedItem + 10];
                 player.inventory[player.selectedItem + 10] = tmp;
@@ -47,6 +50,7 @@ namespace PressF11
             }
             if (PressF11.SwapHorizontal.JustPressed && player.whoAmI == Main.myPlayer)
             {
+                //swap with selected item and next column item(0 and 1, 1 and 2, ... , 9 and 0)
                 Item tmp = player.inventory[player.selectedItem];
                 player.inventory[player.selectedItem] = player.inventory[(player.selectedItem + 1) % 10];
                 player.inventory[(player.selectedItem + 1) % 10] = tmp;
@@ -167,7 +171,7 @@ namespace PressF11
                 Main.playerInventory = false;
                 Main.hideUI = true;
             }
-            //random buy
+            //random buy item
             if (player.talkNPC >= 0)
             {
                 setNPCShop();
