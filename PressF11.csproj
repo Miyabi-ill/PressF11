@@ -55,8 +55,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\tModLoader\Terraria.exe</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
